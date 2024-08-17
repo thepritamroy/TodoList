@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Roboto Condensed", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ga+Maamli&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/*   font-family: "Bebas Neue", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ga+Maamli&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/*   font-family: "Montserrat", sans-serif; */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(blue,yellow);
+}
+.todo-container{
+    outline: auto;
+    width: 550px;
+    min-height: 650px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.todo-container h1{
+    margin: 50px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.input-container input{
+    padding: 5px 10px;
+    color: black;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    outline-color: blue;
+    box-shadow: 0px 0px 5px violet;
+
+}
+.input-container button{
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
+    padding: 7px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    outline-color: white;
+}
+
+.input-container button:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 5px 1px ;
+}
+
+.output-container{
+    width: 100%;
+    padding: 20px;
+   
+}
+
+.output-container span{
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+
+.todo-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+.todo-item span{
+    flex: 3;
+}
+.delete-btn{
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    flex: 1;
+    outline-color: white;
+}
+
+.delete-btn:hover{
+    background-color: white;
+    color: darkblue;
+    box-shadow: 0px 0px 5px 1px;
+}
+
+
+@media (max-width:620px){
+    .todo-container{
+        width: 385px;
+    }
+
+    .delete-btn{
+        padding: 5px 10px;
+        font-size: .8em;
+    }
+    .output-container span{
+        font-size: .9em;
+        text-transform: capitalize;
+    }
+    .output-container{
+        width: 100%;
+        padding-right: 30px;
+       
+    }
+
+    .input-container button{
+        padding: 5px 12px;
+        font-size: .8em;
+    }
+
+    .input-container input{
+        padding: 5px 7px;
+        width: 130px;
+        font-size: .8em;
+        margin: 5px;
+
+    }
+    .todo-container h1{
+        margin: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.7em;
+    }
+}
