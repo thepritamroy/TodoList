@@ -20,7 +20,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(blue,yellow);
+    background: linear-gradient(rgb(2, 2, 144),rgb(118, 118, 2));
 }
 .todo-container{
     outline: auto;
@@ -45,7 +45,7 @@ body{
     border: none;
     margin: 5px;
     outline-color: blue;
-    box-shadow: 0px 0px 5px violet;
+    box-shadow: 0px 0px 5px rgb(209, 212, 217);
 
 }
 .input-container button{
@@ -60,32 +60,41 @@ body{
 }
 
 .input-container button:hover{
-    background-color: black;
+    background-color: rgb(231, 4, 4);
     color: white;
-    box-shadow: 0px 0px 5px 1px ;
 }
 
 .output-container{
     width: 100%;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
    
 }
 
-.output-container span{
-    font-size: 1.2em;
+.output-container p{
+    font-size: 1.1em;
     text-transform: capitalize;
 }
 
 .todo-item{
     width: 100%;
     display: flex;
-    justify-content: space-between;
     margin: 10px;
+    justify-content: space-between;
+    align-items: center;
 
+    .name{
+        flex: 1;
+    }
+    .date{
+        flex: 1;
+    }
+    .button{
+        flex: 1;
+    }
 }
-.todo-item span{
-    flex: 3;
-}
+
+
+
 .delete-btn{
     cursor: pointer;
     border-radius: 5px;
@@ -114,7 +123,7 @@ body{
         padding: 5px 10px;
         font-size: .8em;
     }
-    .output-container span{
+    .output-container p{
         font-size: .9em;
         text-transform: capitalize;
     }
@@ -134,6 +143,54 @@ body{
         width: 130px;
         font-size: .8em;
         margin: 5px;
+
+    }
+    .todo-container h1{
+        margin: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width:520px){
+    .todo-container{
+        width: 345px;
+    }
+
+    .delete-btn{
+        padding: 5px 10px;
+        font-size: .8em;
+    }
+    .output-container p{
+        font-size: .9em;
+        text-transform: capitalize;
+    }
+    .output-container{
+        width: 100%;
+        padding-right: 30px;
+       
+    }
+
+    .input-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .input-container button{
+        padding: 8px 12px;
+        font-size: .8em;
+        width: 40%;
+    }
+
+    .input-container input{
+        padding: 5px 7px;
+        width: 130px;
+        font-size: .8em;
+        margin: 5px;
+        width: 80%;
 
     }
     .todo-container h1{
