@@ -17,26 +17,24 @@
 
        todoListHTML += `
                <div class="todo-item">
-                   <span class="js-todo-list-name">${todoListItem.name}</span>
-                   <span class="js-todo-list-date">${todoListItem.date}</span>
-                   <button class="delete-btn js-delete-btn js-delete-btn">Delete</button>
+                   <div class="name"><p class="js-todo-list-name">${todoListItem.name}</p></div>
+                   <div class="date"><p class="js-todo-list-date">${todoListItem.date}</p></div>
+                   <div class="button"><button class="delete-btn js-delete-btn js-delete-btn">Delete</button></div>
 
                </div>
                `
-
-
             
    })
 
-     document.querySelector('.js-output-container').innerHTML= todoListHTML;
+    document.querySelector('.js-output-container').innerHTML= todoListHTML;
      
-   document.querySelectorAll('.js-delete-btn').forEach((deleteButton,index)=>{
-    deleteButton.addEventListener('click' , ()=>{
-        todoList.splice(index , 1)
-        localStorage.setItem('todoList' , JSON.stringify(todoList));
-        todoListHtml()
-    })
-})
+    document.querySelectorAll('.js-delete-btn').forEach((deleteButton,index)=>{
+            deleteButton.addEventListener('click' , ()=>{
+                todoList.splice(index , 1)
+                localStorage.setItem('todoList' , JSON.stringify(todoList));
+                todoListHtml()
+            })
+        })
     }
 
     function todoListFunction(){
@@ -72,5 +70,9 @@ document.querySelector('.js-add-todo-btn').addEventListener('click',()=>{
 
 
 
-
+document.addEventListener('keydown',(event)=>{
+    if(event.key==='Enter'){
+        todoListFunction();
+    }
+})
 
