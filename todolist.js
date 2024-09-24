@@ -1,13 +1,5 @@
 
- let todoList = JSON.parse(localStorage.getItem('todoList')) || [
-    {
-        name: 'wash dishes',
-        date: '12-08-2024'
-    },
-    {
-        name: 'Watch youtube',
-        date: '13-08-2024'
-    }];
+ let todoList = JSON.parse(localStorage.getItem('todoList')) || [];
 
     function todoListHtml(){
         
